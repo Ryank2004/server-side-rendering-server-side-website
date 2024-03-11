@@ -27,6 +27,14 @@ a {
     font-family:  var(--mainFont);
     color: var(--tekstKleur);
 }
+
+.text {
+    font-family: var(--mainFont);
+    font-weight: 300;
+    font-size: 1.1em;
+    padding-top: .5em;
+    color: #666666;
+}
 .h1 {
     font-family: var(--mainFont);
     font-weight: 600;
@@ -52,6 +60,19 @@ a {
     font-family: var(--mainFont);
     color: var(--tekstKleur);
     font-size: 1em;
+}
+
+/* classes voor de scroll animatie */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.active {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .navigatiebalk {
@@ -116,6 +137,18 @@ transition: 0.5s;
     }
 }
 
+.lijst-button-mobile {
+    display: inline-block;
+    margin-right: 1em;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: white;
+    background-color: #212121;
+    padding: .65em 1.3em;
+    border-radius: .5em;
+    margin-left: 2em;
+}
+
 .hamburger {
     display: block;
     cursor: pointer;
@@ -149,24 +182,47 @@ transition: 0.5s;
     transform: translateY(-10.7px) rotate(-45deg);
   }
 .header {
-    padding: 4em 2em;
+    padding: 2em 2em;
 }
 
 .header p {
-    font-family: var(--mainFont);
-    font-weight: 300;
     font-size: 1.2em;
-    padding-top: .5em;
-    color: #666666;
 }
 @media screen and (min-width: 900px) {
 
     .header p {
         font-weight: 300;
-        font-size: 1.5eem;
+        font-size: 1.5em;
         padding-top: .5em;
     }
 }
+
+.buurtcampus-informatie {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    margin-top: 2em;
+
+}
+.image-samenwerken-container {
+    max-width: 500px;
+    max-height: auto;
+    margin-top: 2em;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.informatie-titel {
+    font-family: var(--mainFont);
+    color: var(--tekstKleur);
+    font-weight: 600;
+    font-size: 1.7em;
+    margin: .7em 0;
+}
+
 
 .initiatief-kaartlijst {
     display: flex;
