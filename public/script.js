@@ -4,7 +4,7 @@ const hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-//   navMenu.classList.toggle("active");
+  document.body.classList.toggle("slide-right");
 });
 
 //Javascript voor invliegende animatie

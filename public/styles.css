@@ -16,7 +16,13 @@ body {
     background-color: var(--achtergrondKleur);
     max-width: 1200px;
     margin: auto;
+    transition: transform .5s;
     
+}
+
+body.slide-right {
+    transform: translateX(30vw);
+    overflow: hidden;
 }
 
 ul li {
@@ -89,6 +95,22 @@ a {
     
 }
 
+.mobile-menu-lijst {
+    float: left;
+    transform: translateX(-30vw);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 30vw;
+    height: 100vh;
+    padding: 20px;
+}
+
+.mobile-lijst-item {
+    color: var(--achtergrondKleur);
+}
+
 .lijst-item {
     display: none;
     margin-right: 1em;
@@ -149,10 +171,16 @@ transition: 0.5s;
     margin-left: 2em;
 }
 
+@media screen and (min-width: 900px) {
+    .lijst-button-mobile {
+        display: none;
+    }
+}
 .hamburger {
     display: block;
     cursor: pointer;
     padding-right: .2em;
+    transition: transform .5s;
 }
 
 @media screen and (min-width: 900px) {
@@ -170,6 +198,10 @@ transition: 0.5s;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background-color: var(--tekstKleur);
+}
+
+.hamburger.active {
+    transform: translateX(-30vw);
 }
 
 .hamburger.active .bar:nth-child(2) {
