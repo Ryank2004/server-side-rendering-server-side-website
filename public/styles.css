@@ -6,10 +6,15 @@
 
 
   :root {
-    --achtergrondKleur: #FFE6C8;
+    /* --achtergrondKleur: #FFE6C8; */
+    --achtergrondKleur: #CEE6F2;
+    --tekstAchtergrondKleur: #E3867D;
+    /* --tekstKleur: #212121; */
     --tekstKleur: #212121;
     --mainFont: "Roboto", sans-serif;
-
+    --secundaireTekstKleur: white;
+    /* --buttonKleur: #6027DA; */
+    /* #666666 */
   }
 
 body {
@@ -36,10 +41,10 @@ a {
 
 .text {
     font-family: var(--mainFont);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.1em;
     padding-top: .5em;
-    color: #666666;
+    color: var(--tekstKleur);
 }
 .h1 {
     font-family: var(--mainFont);
@@ -59,7 +64,13 @@ a {
     font-family: var(--mainFont);
     color: var(--tekstKleur);
     font-weight: 600;
-    font-size: 1.9em;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 900px) {
+    .h2 {
+        font-size: 1.9em;
+    }
 }
 
 .h3 {
@@ -84,8 +95,10 @@ a {
 .navigatiebalk {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
-    padding: 2.2em 2em;
+    padding: .7em 2em;
+    background-color: var(--achtergrondKleur);
 }
 
 .menu-lijst {
@@ -101,14 +114,14 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    background: #000;
+    background: var(--tekstKleur);
     width: 30vw;
     height: 100vh;
     padding: 20px;
 }
 
 .mobile-lijst-item {
-    color: var(--achtergrondKleur);
+    color: var(--tekstAchtergrondKleur);
 }
 
 .lijst-item {
@@ -164,8 +177,8 @@ transition: 0.5s;
     margin-right: 1em;
     font-weight: 500;
     font-size: 1.1em;
-    color: white;
-    background-color: #212121;
+    color: var(--secundaireTekstKleur);
+    background-color: var(--tekstAchtergrondKleur);
     padding: .65em 1.3em;
     border-radius: .5em;
     margin-left: 2em;
@@ -234,7 +247,16 @@ transition: 0.5s;
     flex-direction: column;
     padding: 0 2em;
     margin-top: 2em;
+}
 
+.buurtcampus-informatie p {
+    background-color: var(--tekstKleur);
+    padding: 1em 1em;
+    border-radius: 1em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: var(--achtergrondKleur);
+    box-shadow: 2px 12px 22px 4px rgba(115,115,115,1);
 }
 .image-samenwerken-container {
     max-width: 500px;
