@@ -6,16 +6,12 @@
 
 
   :root {
-    /* --achtergrondKleur: #FFE6C8; */
     --achtergrondKleur: #CEE6F2;
     --secundaireAchtergrondKleur: #962E2A;
     --tekstAchtergrondKleur: #E3867D;
-    /* --tekstKleur: #212121; */
     --tekstKleur: #212121;
     --mainFont: "Roboto", sans-serif;
     --secundaireTekstKleur: white;
-    /* --buttonKleur: #6027DA; */
-    /* #666666 */
   }
 
 body {
@@ -31,9 +27,12 @@ body.slide-right {
     overflow: hidden;
 }
 
+/* globale styling met breakpoints */
+
 ul li {
     list-style: none;
 }
+
 a {
     text-decoration: none;
     font-family:  var(--mainFont);
@@ -42,7 +41,7 @@ a {
 
 .text {
     font-family: var(--mainFont);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.1em;
     padding-top: .5em;
     color: var(--tekstKleur);
@@ -98,7 +97,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: .7em 2em;
+    padding: .9em 2em;
     background-color: var(--achtergrondKleur);
 }
 
@@ -124,8 +123,16 @@ a {
 .mobile-lijst-item {
     display: flex;
     color: var(--tekstAchtergrondKleur);
-    font-size: 1.1em;
-    padding-top: 1.1em;
+    font-size: 1em;
+    padding-top: 1.9em;
+}
+
+@media screen and (min-width: 400px) {
+
+    .mobile-lijst-item {
+        font-size: 1.2em;
+        padding-left: .4em;
+    }
 }
 
 .lijst-item {
@@ -163,10 +170,10 @@ transition: 0.5s;
     font-weight: 500;
     font-size: 1.1em;
     color: white;
-    background-color: #212121;
+    background-color: var(--tekstAchtergrondKleur);
     padding: .65em 1.3em;
     border-radius: .5em;
-    margin-left: 1em;
+    margin-left: 2em;
     margin-top: .6em;
 }
 
@@ -221,7 +228,13 @@ transition: 0.5s;
 }
 
 .hamburger.active {
-    transform: translateX(-30vw);
+    transform: translateX(-24vw);
+}
+@media screen and (min-width: 500px) {
+    
+    .hamburger.active {
+        transform: translateX(-30vw);
+    } 
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -252,38 +265,51 @@ transition: 0.5s;
 
 .buurtcampus-informatie {
     display: flex;
+    max-width: 400px;
     flex-direction: column;
-    padding: 0 2em;
-    margin-top: 1.5em;
-    margin-bottom: 3em;
-}
-
-.buurtcampus-informatie p {
-    background-color: var(--achtergrondKleur);
-    padding: 1.2em 1.2em;
-    border-radius: 1em;
-    font-size: 1.2em;
-    line-height: 1.2em;
-    color: var(--tekstKleur);
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
     box-shadow: 2px 12px 22px 4px rgba(115,115,115,1);
-}
-.image-samenwerken-container {
-    max-width: 500px;
-    max-height: auto;
-    margin-top: 2em;
-
-    & img {
-        width: 100%;
-        height: auto;
-    }
+    border-radius: .8em;
 }
 
+.informatie-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: .8em .8em 0 0;
+    object-fit: cover;
+}
+.informatie-container {
+    margin: 1em 1.3em;
+}
 .informatie-titel {
     font-family: var(--mainFont);
     color: var(--tekstKleur);
-    font-weight: 600;
-    font-size: 1.7em;
-    margin: .7em 0;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.informatie-text {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    font-weight: 300;
+    color: var(--tekstKleur);
+    font-family: var(--mainFont);
+    padding-top: .7em;
+    
+}
+
+.initiatief-informatie {
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    box-shadow: 2px 12px 22px 4px rgba(115,115,115,1);
+    border-radius: .8em; 
 }
 
 
@@ -295,6 +321,16 @@ transition: 0.5s;
     
 }
 
+@media screen and (min-width: 760px) {
+
+    .initiatief-kaartlijst {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: .5em 2em;
+        justify-content: center;
+    }
+}
+
 .initiatief-kaart {
    display: flex;
    flex-direction: column;
@@ -304,9 +340,16 @@ transition: 0.5s;
    
 }
 
+@media screen and (min-width: 760px) {
+
+    .initiatief-kaart {
+        width: 320px;
+    }
+}
+
 .kaart-content {
     color: var(--achtergrondKleur);
-    padding: 1em 0em 0em 1em;
+    padding: 1em 1em 0em 1em;
     
 }
 
@@ -321,22 +364,11 @@ transition: 0.5s;
     margin-top: .4rem;
     letter-spacing: .03em;
 }
-/* 
-.initiatief-image-container {
-    max-width: 20vw;
-    max-height: auto;
-    overflow: hidden;
-    margin-left: auto;
-}
-
-.initiatief-image {
-    width: 100%;
-    height: auto;
-} */
 
 .lees-meer {
     background-color: var(--tekstAchtergrondKleur);
     color: white;
+    margin-top: auto;
     margin-left: auto;
     margin-right: 1em;
     margin-bottom: 1em;
