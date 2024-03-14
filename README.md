@@ -1,33 +1,31 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+[docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+De BuurtCampus
 
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+<br>
+Een nieuw platform bedacht door De Hallen. Op deze website kunnen buurtbewoners van Amsterdam-West elkaar steunen met allerei verchillende dingen. Het is een soort marktplaats voor services in de buurt.
+<img width="425" alt="Screenshot 2024-03-14 at 21 22 08" src="https://github.com/Ryank2004/server-side-rendering-server-side-website/assets/25478764/89db47b9-8c7f-47fe-a3f6-6190431c4ba6">
 
-## Gebruik
-<!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+https://buurtcampus.cyclic.app
+
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+HTML, CSS, Javascript, NodeJS, express, Directus
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+Fork deze repository en open de code met github desktop. Nu zal je in VScode verder kunnen werken aan dit project, Met de terminal kan je de site op localhost draaien.
 
 
-## Bronnen
+
 
 ## Licentie
 
