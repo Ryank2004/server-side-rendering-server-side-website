@@ -44,6 +44,7 @@ app.get('/initiatieven', function (request, response){
 
     response.render('initiatieven', {initiatieven: initiatievenData.data})
   })
+  
 })
 
 
