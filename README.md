@@ -24,7 +24,10 @@ HTML, CSS, Javascript, NodeJS, express, Directus
 ## Installatie
 Fork deze repository en open de code met github desktop. Nu zal je in VScode verder kunnen werken aan dit project, Met de terminal kan je de site op localhost draaien.
 
-
+1. Fork de repository
+2. Open de code met Github Desktop
+3. Open met Visual Studio code
+4. Voer "npm start" in de terminal en druk op enter.
 
 
 ## Licentie
