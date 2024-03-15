@@ -43,8 +43,7 @@ app.get('/initiatieven', function (request, response){
     fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((initiatievenData) => {
 
     response.render('initiatieven', {initiatieven: initiatievenData.data})
-    })
-
+  })
 })
 
 
